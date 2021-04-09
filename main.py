@@ -33,7 +33,7 @@ def clear(function):
 # This Function it's the login one, you need to log in before using the programa obviously
 # Esta es la función de logeo, ingreso, como quieras decirle, necesitas logearte para entrar en el programa
 def login():
-    global loginVerify, delete, today, user
+    global loginVerify, delete, today, user, gain
     user=textBoxlogin.get()
     password=textBoxpassword.get()
     if user in ["Abraham","Thorns"] and password in ["123"]:
@@ -379,9 +379,10 @@ def mainWindow():
 # This function write on a txt file when a purchase is successful
 # Cuando una compra es confirmada, esta función lo registra en un archivo de texto
 def final():
-    global checkout
+    global checkout, gain
     file=open("ganancias.txt","a")
     file.write(f"{today} - {user} ha realizado una venta de ${gain}!\n")
+    gain=0
     for i in productTable.get_children():
         productTable.delete(i)
     if delete==False:
@@ -393,9 +394,10 @@ def final():
 # This function write on a txt file when a purchase is not successful
 # Cuando una compra es rechazada o invalidada, esta función lo registra en un archivo de texto
 def restart():
-    global checkout
+    global checkout,gain
     file=open("ganancias.txt","a")
     file.write(f"{today} - {user} ha cancelado una venta de ${gain}!\n")
+    gain=0
     for i in productTable.get_children():
         productTable.delete(i)
     if delete==False:
