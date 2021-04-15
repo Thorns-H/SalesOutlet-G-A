@@ -10,3 +10,9 @@ Con este programa puedes logearte, registrar compras hechas y guardados esos dat
 estoy trabajando para enviar esa información a un gmail.
 
 Lista de productos, si quieres testearlo : https://drive.google.com/file/d/1_8todsvzfPaC7pNttezEl6o5wwJ1NdVS/view?usp=sharing
+
+## Screenshots :
+#### Login Window
+![](images/LoginWindowSS.jpg)
+#### Main Window
+![](images/MainWindowSS.jpg)
